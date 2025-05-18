@@ -1,0 +1,32 @@
+Stack Widget
+Inkwell
+(key,ctx) stuff
+ListView.Builder
+getter functions
+app bar
+Image.network
+Navigator
+Tab navifation 
+SnckBVar
+Drawer
+WillPopeScope
+?? operator
+riverpod
+consumerStatefulwidget
+StateNotifierProvider calss 
+188. Creating a More Complex Provider with
+StateNotifier
+i2min
+189. Using the FavoritesProvider
+5min
+190. Triggering a Notifier Method
+EJ 6min
+191. Getting Started with Another Provider
+8min
+192. Combining Local & Provider-managed State
+7min
+193. Outsourcing State Into The Provider
+FORM
+GLOBAL KEY  
+
+
