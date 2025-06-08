@@ -30,3 +30,226 @@ FORM
 GLOBAL KEY  
 
 
+HTTP packet- get post delete
+
+
+
+FutureBuilder --- very important 
+
+
+
+1. Project & Code Architecture
+Clean Architecture (domain → data → presentation layers)
+
+Feature‑first folder structure vs. layer‑first (choose & stick)
+
+Dependency Injection (e.g., get_it, riverpod provider overrides)
+
+Modularization / melos workspaces
+
+Environment configs via flutter_dotenv
+
+2. State Management
+Riverpod (StateNotifier, AsyncNotifier, StreamProvider)
+
+Bloc/Cubit (at least one module to show versatility)
+
+ValueNotifier + AnimatedBuilder for micro‑animations
+
+Provider for very simple inherited data
+
+3. Routing & Navigation
+go_router with named routes, nested navigation, deep links
+
+Shell routes for bottom‑nav tabs
+
+Route guards (auth, onboarding)
+
+4. UI/UX Widgets & Patterns
+Material 3 + custom theme extensions
+
+Adaptive layout (LayoutBuilder, MediaQuery)
+
+SliverAppBar, CustomScrollView, SliverList
+
+ScrollController for infinite scroll + “back to top” FAB
+
+PageView (onboarding / stories)
+
+RefreshIndicator
+
+DraggableScrollableSheet (e.g., media picker)
+
+AnimatedSwitcher, AnimatedContainer, implicit animations
+
+Explicit animations with AnimationController + TweenSequence
+
+Hero transitions between feed and detail
+
+Dismissible for swipe actions
+
+ReorderableListView
+
+InteractiveViewer (pinch‑zoom images)
+
+VideoPlayer (chewie or video_player pkg) with lifecycle handling
+
+CachedNetworkImage with placeholder / error widgets
+
+Shimmer for skeleton loaders
+
+Rive or Lottie for micro‑interactions
+
+Platform‑aware widgets (Cupertino* on iOS)
+
+5. Forms & Input
+Form + TextFormField with validation
+
+Masked input (e.g., phone) using flutter_multi_formatter
+
+File picker (image_picker, file_picker)
+
+Rich‑text editor or markdown composer (flutter_markdown)
+
+Emoji picker
+
+6. Networking & Offline
+dio with interceptors, cancel tokens, retry logic
+
+GraphQL experiment (graphql_flutter) for one endpoint
+
+Local persistence: Hive (offline feed), SQflite sample DAO
+
+Connectivity monitoring (connectivity_plus)
+
+Pull‑to‑refresh & optimistic updates
+
+Background fetch (workmanager)
+
+7. Realtime & Backend (Supabase)
+Auth (email, OAuth, magic link)
+
+Row‑level security policies
+
+Realtime subscriptions (posts, likes, messages)
+
+Storage uploads with signed URLs & resize via edge function
+
+Postgres Functions & rpc() calls from Flutter
+
+pgvector similarity search for “Explore” page
+
+Edge Functions (TypeScript) for notifications, content moderation
+
+8. Push & Local Notifications
+firebase_messaging or onesignal_flutter
+
+Foreground vs. background handling
+
+Action buttons (reply inline to DM)
+
+Local notifications (flutter_local_notifications) for scheduled reminders
+
+9. Authentication UX
+Social login buttons w/ sign_in_button
+
+Biometric auth (local_auth) for secure journal/chat
+
+Password reset, email verification flows
+
+Persistent session refresh, silent logout
+
+10. Security Best Practices
+TLS pinning (certificate_pinning pkg)
+
+Secure storage (flutter_secure_storage) for tokens
+
+Obfuscate secrets (no keys committed)
+
+Input sanitation to prevent XSS in markdown renderer
+
+11. Testing
+Unit tests (business logic, utils)
+
+Widget tests (golden tests for feed card)
+
+Integration tests (integration_test, flutter_test) with Firebase Test Lab / Codemagic
+
+Mocking Supabase using mocktail
+
+12. CI/CD
+GitHub Actions / Codemagic pipeline: test → build → deploy
+
+YAML matrix for Android, iOS, Web
+
+Automatic version bump & changelog generation
+
+Play Store internal track + Supabase web hosting for PWA
+
+13. Performance
+flutter_driver / DevTools CPU profile
+
+Image sizing & caching rules
+
+Lazy loading lists & cacheExtent
+
+trace widget rebuilds (RepaintRainbow)
+
+Split APK / IPA & app size analysis
+
+14. Accessibility & Internationalization
+Semantics labels for interactive widgets
+
+Dynamic text scaling (MediaQuery.textScaleFactor)
+
+High‑contrast mode check
+
+RTL support + locale switch (flutter_localizations)
+
+15. Analytics & Crash Reporting
+Firebase Analytics events (post created, message sent)
+
+Sentry or Crashlytics integration
+
+Custom performance traces (screen load time)
+
+16. Dev Tooling
+dart_code_metrics & very_good_analysis lints
+
+VS Code launch configs, flavors (dev, prod, staging)
+
+FlutterGen for assets
+
+Git hooks (pre‑commit format + analyze)
+
+17. Design Systems & Theming
+Token‑based color scheme (flex_color_scheme)
+
+Typography scale (Google Fonts)
+
+Component library docs site (storybook_flutter)
+
+18. Third‑Party Integrations
+Image moderation API (Cloud Vision safe‑search)
+
+OpenAI for caption/hashtag suggestions
+
+Map view (OpenStreetMap via flutter_map) for geo‑threads
+
+Payment stub (Stripe) for potential premium features
+
+19. Advanced Native Stuff (Pick 1‑2)
+Platform channels to call native ARCore/ARKit
+
+Picture‑in‑Picture for video playback
+
+Home screen widgets (Android/iOS)
+
+20. Documentation & Deliverables
+In‑code doc comments & public API docs (dartdoc)
+
+Architect diagram (Draw.io in README)
+
+ADRs (Architecture Decision Records) for big choices
+
+Onboarding guide for future devs
